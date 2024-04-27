@@ -68,3 +68,5 @@ Once the Cluster is created, you are good to go with your kubernetes commands
 ```kubectl apply -f eks-admin-service-account.yaml```
 ### Create Auth Token
 ```kubectl create token eks-admin -n kube-system```
+### Connect to Dashboard
+Start Kubectl Proxy using ```kubectl proxy```
