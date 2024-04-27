@@ -57,9 +57,12 @@ This command creates an EKS cluster named "mravi-eks" in the "us-east-1" region 
 
 Once the Cluster is created, you are good to go with your kubernetes commands
 
-### Clone Repo
+### Create Deployment and Service
 ```git clone https://github.com/mrinalpravi/eks-workshop.git```
 
+```kubectl apply -f deployment.yaml```
+
+```kubectl apply -f service.yaml```
 
 
 ### Deploy Kubernetes Dashboard
