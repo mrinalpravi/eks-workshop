@@ -59,3 +59,9 @@ Once the Cluster is created, you are good to go with your kubernetes commands
 
 ### Clone Repo
 ```git clone https://github.com/mrinalpravi/eks-workshop.git```
+
+
+
+### Deploy Kubernetes Dashboard
+```kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml```
+### Create an eks-admin Service Account
