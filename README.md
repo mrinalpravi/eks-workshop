@@ -65,3 +65,6 @@ Once the Cluster is created, you are good to go with your kubernetes commands
 ### Deploy Kubernetes Dashboard
 ```kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml```
 ### Create an eks-admin Service Account
+```kubectl apply -f eks-admin-service-account.yaml```
+### Create Auth Token
+```kubectl create token eks-admin -n kube-system```
