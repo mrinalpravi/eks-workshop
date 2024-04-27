@@ -73,3 +73,4 @@ Once the Cluster is created, you are good to go with your kubernetes commands
 ```kubectl create token eks-admin -n kube-system```
 ### Connect to Dashboard
 Start Kubectl Proxy using ```kubectl proxy```
+Access the dashbord at http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
