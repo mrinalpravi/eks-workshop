@@ -35,15 +35,15 @@ Verify aws cli by executing any commands, example
 
 ### Create EKS Cluster using EKSCTL
 ```
-eksctl create cluster --name mravi-eks --region us-east-1 --nodegroup-name eks-node-group --node-type t3.medium --nodes 3 --nodes-min 1  --nodes-max 4  --managed
+eksctl create cluster --name sre-eks --region us-east-1 --nodegroup-name sre-node-group --node-type t3.medium --nodes 3 --nodes-min 1  --nodes-max 4  --managed
 ```
-This command creates an EKS cluster named "mravi-eks" in the "us-east-1" region with a managed node group named "eks-node-group". The node group uses "t3.medium" instances, with an initial count of 3 nodes, a minimum of 1 node, and a maximum of 4 nodes. It automatically creates a Virtual Private Cloud (VPC) for you if you don't specify one explicitly.
+This command creates an EKS cluster named "sre-eks" in the "us-east-1" region with a managed node group named "sre-node-group". The node group uses "t3.medium" instances, with an initial count of 3 nodes, a minimum of 1 node, and a maximum of 4 nodes. It automatically creates a Virtual Private Cloud (VPC) for you if you don't specify one explicitly.
 
---name mravi-eks: This specifies the name of the EKS cluster, in this case, it's set to "mravi-eks".
+--name mravi-eks: This specifies the name of the EKS cluster, in this case, it's set to "sre-eks".
 
 --region us-east-1: This specifies the AWS region in which the EKS cluster will be created. In this case, it's set to "us-east-1".
 
---nodegroup-name eks-node-group: This specifies the name of the node group within the EKS cluster. A node group is a set of worker nodes that run Kubernetes pods.
+--nodegroup-name sre-node-group: This specifies the name of the node group within the EKS cluster. A node group is a set of worker nodes that run Kubernetes pods.
 
 --node-type t3.medium: This specifies the instance type for the worker nodes in the node group. In this case, it's set to "t3.medium".
 
@@ -57,8 +57,13 @@ This command creates an EKS cluster named "mravi-eks" in the "us-east-1" region 
 
 Once the Cluster is created, you are good to go with your kubernetes commands
 
-### Create Deployment and Service
+
+
+## Create Deployment and Service (From your local machine)
 ```git clone https://github.com/mrinalpravi/eks-workshop.git```
+
+### Connecting to Kubernetes Cluster in EKS
+```aws eks update-kubeconfig --name sre-eks --region us-east-1 --profile sre-kochi```
 
 ```kubectl apply -f deployment.yaml```
 
