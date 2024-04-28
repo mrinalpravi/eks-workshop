@@ -55,6 +55,9 @@ This command creates an EKS cluster named "sre-eks" in the "us-east-1" region wi
 
 --managed: This flag indicates that the node group is managed by Amazon EKS. Managed node groups are recommended as they are easier to manage and maintain.
 
+We are only responsible for managing the worker nodes, not the control plane (master nodes). The master nodes, which constitute the control plane of the EKS cluster, are fully managed by AWS behind the scenes.
+The master nodes of an EKS cluster are not visible or accessible to you directly. They are abstracted away from you as part of the managed service. AWS handles the management, scaling, and maintenance of the EKS control plane, ensuring high availability and security.
+
 Once the Cluster is created, you are good to go with your kubernetes commands
 
 
